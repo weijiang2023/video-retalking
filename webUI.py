@@ -46,7 +46,7 @@ def cleanup_temp_files(file_list):
 
 
 def cut_video_segments(video_file, segment_length):
-    temp_directory = 'temp/audio'
+    temp_directory = 'temp/video'
     shutil.rmtree(temp_directory, ignore_errors=True)
     shutil.os.makedirs(temp_directory, exist_ok=True)
     segment_template = f"{temp_directory}/{random.randint(0,1000)}_%03d.mp4"
@@ -60,7 +60,7 @@ def cut_video_segments(video_file, segment_length):
 
 
 def cut_audio_segments(audio_file, segment_length):
-    temp_directory = 'temp/video'
+    temp_directory = 'temp/audio'
     shutil.rmtree(temp_directory, ignore_errors=True)
     shutil.os.makedirs(temp_directory, exist_ok=True)
     segment_template = f"{temp_directory}/{random.randint(0,1000)}_%03d.mp3"
@@ -108,7 +108,7 @@ with gradio.Blocks(
                     label="segment length (Second), 0 for no segmentation")
             with gradio.Row():
                 with gradio.Column():
-                    v = gradio.Video(label='SOurce Face')
+                    v = gradio.Video(label='Source Face')
 
                 with gradio.Column():
                     a = gradio.Audio(
