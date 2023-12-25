@@ -48,13 +48,13 @@ css="""
     text-align: left;
 }
 """
-    
+
 with gr.Blocks(css=css) as demo:
     with gr.Column(elem_id="col-container"):
         gr.HTML("""
-        <h2 style="text-align: center;">Video ReTalking</h2>
+        <h2 style="text-align: center;">LipSync 口型对齐</h2>
         <p style="text-align: center;">
-            Audio-based Lip Synchronization for Talking Head Video Editing in the Wild
+            Audio-based Lip Synchronization for Talking Head
         </p>
                 """)
 
